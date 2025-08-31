@@ -1,0 +1,45 @@
+.hero_section {
+	background-image: url("../images/heroSection.png");
+	background-size: cover;
+	background-position: center; /* Ensures the image is always centered */
+	background-repeat: no-repeat;
+
+	display: flex; /* To center content inside hero */
+	align-items: center;
+	justify-content: center;
+
+	min-height: 80vh; /* More responsive than fixed 500px */
+	padding: 60px 20px; /* Adds breathing room and mobile friendliness */
+	color: #fff; /* Ensures text is readable */
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+/* Optional: Add overlay for better contrast */
+.hero_section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+	z-index: 1;
+}
+
+/* Ensure content sits above overlay */
+.hero_section > * {
+	position: relative;
+	z-index: 2;
+}
+.prevIcon {
+	left: -100px !important;
+	z-index: 2 !important;
+	color: black !important;
+}
+.nextIcon {
+	right: -100px !important;
+	z-index: 2 !important;
+	color: black !important;
+}
